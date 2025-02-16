@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'Axum_test'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=Axum_test",
+                    "--package=Axum_test"
+                ],
+                "filter": {
+                    "name": "Axum_test",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'Axum_test'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=Axum_test",
+                    "--package=Axum_test"
+                ],
+                "filter": {
+                    "name": "Axum_test",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
